@@ -50,4 +50,24 @@ class Follow(Base):
         Index('idx_follower', 'follower_id'),
         Index('idx_following', 'following_id'),
     )
+   from fastapi import FastAPI
+from database import engine, Base
+import models  # <--- Base.metadata me tables register karne ke liye zaroori hai
+
+# Sabhi Routers ko import karna
+from routers import auth, posts, follows
+
+# Database Tables aur Indexes automatic generate honge
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI(title="Connected Social Media API")
+
+# Route Handlers Attach (Include) karna
+app.include_router(auth.router)
+app.include_router(posts.router)
+app.include_router(follows.router)
+
+@app.get("/")
+def root():
+    return {"status": "running", "docs": "/docs"}
     
