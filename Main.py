@@ -1,4 +1,9 @@
-from fastapi import FastAPI
+# main.py ke andar app = FastAPI() ke thik niche ye jodein:
+
+@app.get("/")
+def home():
+    return {"message": "Welcome to Social Media API Backend!"}
+    from fastapi import FastAPI
 from database import engine, Base
 from routers import auth, posts, follows
 
