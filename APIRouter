@@ -1,0 +1,8 @@
+social_app/
+│── database.py        # DB Connection Configuration
+│── models.py          # Database Models & Indexes
+│── main.py            # Main App Entry Point (Aggregator)
+└── routers/
+    ├── auth.py        # Login, Register & Profile Page APIs
+    ├── posts.py       # Post Creation & Feed Page APIs
+    └── follows.py     # Follow, Unfollow & Network Page APIs
