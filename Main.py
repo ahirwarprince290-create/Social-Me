@@ -86,3 +86,14 @@ from database import engine, Base
 # Sub-folder (routers/) ki files
 from routers import auth, posts, 
 your-app.koyeb.app
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
