@@ -84,6 +84,5 @@ import models
 from database import engine, Base
 
 # Sub-folder (routers/) ki files
-from routers import auth, posts, follows
-
-pip install fastapi uvicorn sqlalchemy pydantic
+from routers import auth, posts, 
+your-app.koyeb.app
